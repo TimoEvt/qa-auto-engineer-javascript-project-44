@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@hexlet/code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[![Actions Status](https://github.com/TimoEvt/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/TimoEvt/qa-auto-engineer-javascript-project-44/actions)",
   "main": "index.js",
   "scripts": {
