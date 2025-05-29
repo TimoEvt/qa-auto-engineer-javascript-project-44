@@ -25,4 +25,6 @@
 
 ## Демонстрация игры brain-prime
 
+Это демонстрация запуска и взаимодействия с игрой brain-prime, включая примеры ответов и завершения игры.
+
 [Посмотреть демо на asciinema](https://asciinema.org/a/T8QoPcuBcpSS9zpiljUlF9cRN)
