@@ -18,4 +18,6 @@
 
 
 ## Демонстрация brain-progression
-[asciinema demo](https://asciinema.org/a/RgrpSMn2h8A2IuX1BwyG7Fmbd)
+
+Это демонстрация запуска и взаимодействия с игрой brain-progression.js, включая примеры ответов и завершения игры.
+[Посмотреть демо на asciinema demo](https://asciinema.org/a/RgrpSMn2h8A2IuX1BwyG7Fmbd)
