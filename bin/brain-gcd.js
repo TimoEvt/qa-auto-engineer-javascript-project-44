@@ -4,4 +4,4 @@ import generateRound from '../src/games/brain-gcd.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-runGame(rule, generateRound);
+runGame(generateRound, rule);
