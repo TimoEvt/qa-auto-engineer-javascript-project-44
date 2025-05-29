@@ -16,3 +16,6 @@
 
 [Посмотреть демо на asciinema](https://asciinema.org/a/PKgJQcmh4RJU8ICNtA1iii64q)
 
+
+## Демонстрация brain-progression
+[asciinema demo](https://asciinema.org/a/RgrpSMn2h8A2IuX1BwyG7Fmbd)
