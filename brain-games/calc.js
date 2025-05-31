@@ -21,6 +21,8 @@ function generateCalcRound() {
     case '*':
       result = num1 * num2;
       break;
+    default:
+      break;
   }
 
   const question = `${num1} ${operator} ${num2}`;

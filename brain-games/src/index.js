@@ -7,10 +7,10 @@ export default function runGame(game) {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  for (let round = 0; round < maxRounds; round++) {
+  for (let round = 0; round < maxRounds; round += 1) {
     const { question, correctAnswer } = game.generateRound();
 
-    console.log('Question: ' + question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer !== correctAnswer) {

@@ -25,6 +25,8 @@ export function generateRound() {
     case '*':
       correctAnswer = (num1 * num2).toString();
       break;
+    default:
+      break;
   }
 
   const question = `${num1} ${operator} ${num2}`;
