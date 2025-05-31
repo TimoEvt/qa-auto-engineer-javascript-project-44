@@ -1,6 +1,4 @@
 function runGameEngine(game, description) {
-  console.log(description);
-  // Логика запуска игры
+  console.log(description)
 }
-
-module.exports = runGameEngine;
+module.exports = runGameEngine
