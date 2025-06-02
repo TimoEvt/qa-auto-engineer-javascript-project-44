@@ -14,7 +14,7 @@ export function generateRound() {
   const num2 = getRandomInt(1, 50)
   const operator = getRandomOperator()
 
-  let correctAnswer;
+  let correctAnswer
   switch (operator) {
     case '+':
       correctAnswer = (num1 + num2).toString()
