@@ -1,16 +1,22 @@
+import js from '@eslint/js';
+
 export default [
   {
-    files: ["**/*.js"],
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
-        console: "readonly",
-        process: "readonly"
-      }
+        console: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        process: 'readonly',
+        __dirname: 'readonly',
+      },
     },
     rules: {
-      "no-console": "off"
-    }
-  }
+      ...js.configs.recommended.rules,
+    },
+  },
 ];
+
