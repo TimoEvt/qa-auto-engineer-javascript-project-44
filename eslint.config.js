@@ -8,10 +8,9 @@ export default [
       sourceType: 'module',
       globals: {
         console: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
         process: 'readonly',
-        __dirname: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
       },
     },
     rules: {
