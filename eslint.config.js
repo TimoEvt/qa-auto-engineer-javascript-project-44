@@ -8,33 +8,21 @@ export default defineConfig([
     extends: [js.configs.recommended],
     languageOptions: {
       globals: {
-<<<<<<< HEAD
-        console: 'readonly',
-        process: 'readonly',
-        module: 'readonly',
-=======
         ...globals.node,
         ...globals.browser,
         require: "readonly",
         module: "readonly",
         console: "readonly",
->>>>>>> 8935267 (Настроил eslint конфигурацию, исправил ошибки)
+        process: "readonly",
       },
       ecmaVersion: "latest",
       sourceType: "module",
     },
     rules: {
-<<<<<<< HEAD
       ...js.configs.recommended.rules,
-      'no-console': 'off',
-      'import/extensions': 'off',
-    },
-  },
-];
-=======
       "no-console": "off",
+      "import/extensions": "off",
     },
   },
 ]);
 
->>>>>>> 8935267 (Настроил eslint конфигурацию, исправил ошибки)
