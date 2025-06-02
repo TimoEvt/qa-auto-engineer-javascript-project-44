@@ -1,7 +1,7 @@
 export default function generateRound() {
   const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-  const progressionLength = 10;
+  const progressionLength = 10
   const start = getRandomNumber(1, 20)
   const step = getRandomNumber(1, 10)
 
