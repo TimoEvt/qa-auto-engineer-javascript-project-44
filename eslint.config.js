@@ -20,8 +20,8 @@ export default defineConfig([
     },
     rules: {
       ...js.configs.recommended.rules,
-      "no-console": 'off',
-      "import/extensions": 'off',
+      'no-console': 'off',
+      'import/extensions': 'off',
     },
   },
 ])
