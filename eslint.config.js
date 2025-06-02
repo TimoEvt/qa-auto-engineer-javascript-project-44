@@ -10,12 +10,12 @@ export default [
         console: 'readonly',
         process: 'readonly',
         module: 'readonly',
-        require: 'readonly',
       },
     },
     rules: {
       ...js.configs.recommended.rules,
+      'no-console': 'off',
+      'import/extensions': 'off',
     },
   },
 ];
-
