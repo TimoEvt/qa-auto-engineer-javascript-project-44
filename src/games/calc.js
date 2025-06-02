@@ -23,7 +23,7 @@ const getCalcRound = () => {
       throw new Error(`Unknown operator: ${operator}`)
   }
 
-  return [question, String(correctAnswer)];
+  return [question, String(correctAnswer)]
 }
 
 export default getCalcRound
