@@ -9,7 +9,7 @@ const generateRound = () => {
   const num2 = getRandomInt(1, 100);
   const operator = operators[getRandomInt(0, operators.length - 1)];
 
-  const question = \`\${num1} \${operator} \${num2}\`;
+  const question = `${num1} ${operator} ${num2}`;
   let answer;
   switch (operator) {
     case '+': answer = String(num1 + num2); break;
