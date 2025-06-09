@@ -16,7 +16,7 @@ const generateRound = () => {
     case '-': answer = String(num1 - num2); break;
     case '*': answer = String(num1 * num2); break;
     default:
-      throw new Error(\`Unknown operator: \${operator}\`);
+      throw new Error(`Unknown operator: ${operator}`);
   }
 
   return [question, answer];
