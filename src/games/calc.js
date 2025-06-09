@@ -14,11 +14,11 @@ const generateRound = () => {
   let answer
   switch (operator) {
     case '+': answer = String(num1 + num2)
-    break
+      break
     case '-': answer = String(num1 - num2)
-    break
+      break
     case '*': answer = String(num1 * num2)
-    break
+      break
     default:
       throw new Error(`Unknown operator: ${operator}`)
   }
