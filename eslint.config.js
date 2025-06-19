@@ -6,11 +6,19 @@ export default [
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       globals: {
         ...globals.node,
         ...globals.browser,
+        ...globals.jest,
+        require: 'readonly',
+        module: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      env: {
+        jest: true, 
       },
     },
     rules: {
@@ -19,12 +27,9 @@ export default [
     },
   },
   {
-    // Специально для тестов — включаем Jest globals
-    files: ['__tests__/**/*.js', '**/*.test.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-      },
+    files: ['**/__tests__/**/*.js', '**/*.test.js'],
+    env: {
+      jest: true,
     },
   },
 ]
