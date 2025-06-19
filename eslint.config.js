@@ -1,34 +1,31 @@
 import js from '@eslint/js'
+import globals from 'globals'
 
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+        ...globals.jest,
+        require: 'readonly',
+        module: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
       ecmaVersion: 'latest',
       sourceType: 'module',
+      env: {
+        jest: true,  
+        node: true,
+        browser: true,
+      },
     },
     rules: {
       'no-console': 'off',
       'import/extensions': 'off',
-      '@stylistic/no-trailing-spaces': 'error',
-    },
-  },
-  {
-    files: ['**/__tests__/**/*.js', '**/*.test.js'],
-    env: {
-      jest: true,
-      node: true,
-    },
-    languageOptions: {
-      globals: {
-        test: 'readonly',
-        expect: 'readonly',
-        describe: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        jest: 'readonly',
-      },
     },
   },
 ]
