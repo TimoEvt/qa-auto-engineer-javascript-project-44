@@ -3,13 +3,14 @@ import globals from 'globals'
 
 export default [
   js.configs.recommended,
+
+  // Общие правила для всех JS-файлов
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       globals: {
         ...globals.node,
         ...globals.browser,
-        ...globals.jest,
         require: 'readonly',
         module: 'readonly',
         console: 'readonly',
@@ -18,7 +19,6 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       env: {
-        jest: true,  
         node: true,
         browser: true,
       },
@@ -26,6 +26,21 @@ export default [
     rules: {
       'no-console': 'off',
       'import/extensions': 'off',
+    },
+  },
+
+  {
+    files: ['**/__tests__/**/*.js', '**/*.test.js', '**/*.spec.js'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+      env: {
+        jest: true,
+      },
+    },
+    rules: {
+      'no-undef': 'off',
     },
   },
 ]
