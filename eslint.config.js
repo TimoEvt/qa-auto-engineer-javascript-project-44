@@ -6,10 +6,12 @@ export default [
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
+      env: {
+        node: true,
+        browser: true,
+        jest: true, // добавляем Jest environment
+      },
       globals: {
-        ...globals.node,
-        ...globals.browser,
-        ...globals.jest, // Добавлено для Jest
         require: 'readonly',
         module: 'readonly',
         console: 'readonly',
@@ -18,9 +20,18 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
+    plugins: {
+      jest: 'eslint-plugin-jest',
+    },
     rules: {
       'no-console': 'off',
       'import/extensions': 'off',
+
+      // Правила из eslint-plugin-jest
+      'jest/no-disabled-tests': 'warn',
+      'jest/no-focused-tests': 'error',
+      'jest/no-identical-title': 'error',
+      'jest/valid-expect': 'error',
     },
   },
 ]
