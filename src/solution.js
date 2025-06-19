@@ -1,1 +1,1 @@
-export default /ruby1\.js/;
+export default /ruby1\.js/
