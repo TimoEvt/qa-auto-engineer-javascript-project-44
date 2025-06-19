@@ -1,15 +1,15 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import { defineConfig } from 'eslint/config'
+import js from '@eslint/js';
+import globals from 'globals';
 
-export default defineConfig([
+export default [
+  js.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs}'],
-    extends: [js.configs.recommended],
     languageOptions: {
       globals: {
         ...globals.node,
         ...globals.browser,
+        ...globals.jest, // Добавлено для Jest
         require: 'readonly',
         module: 'readonly',
         console: 'readonly',
@@ -19,9 +19,8 @@ export default defineConfig([
       sourceType: 'module',
     },
     rules: {
-      ...js.configs.recommended.rules,
       'no-console': 'off',
       'import/extensions': 'off',
     },
   },
-])
+];
