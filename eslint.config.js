@@ -7,15 +7,13 @@ export default [
     languageOptions: {
       env: {
         node: true,
-        browser: true,
-        jest: true, // Включаем Jest env для глобальных тестовых функций
+        jest: true, 
       },
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
     rules: {
       'no-console': 'off',
-      'import/extensions': 'off',
     },
   },
 ]
