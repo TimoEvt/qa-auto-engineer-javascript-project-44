@@ -1,8 +1,10 @@
-import js from '@eslint/js'
-import globals from 'globals'
+import js from '@eslint/js';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
+
+  // Базовые настройки для всех JS-файлов
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
@@ -22,12 +24,18 @@ export default [
       'import/extensions': 'off',
     },
   },
+
+  // Отдельные настройки для тестов
   {
-    files: ['**/__tests__/**/*.js'],
+    files: ['**/__tests__/**/*.js', '**/*.test.js', '**/*.spec.js'],
     languageOptions: {
       globals: {
         ...globals.jest,
       },
     },
+    rules: {
+      'no-undef': 'off',
+    },
   },
-]
+];
+
