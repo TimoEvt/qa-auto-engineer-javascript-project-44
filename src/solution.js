@@ -1,1 +1,1 @@
-export default /ruby1\.js/
+import { test, expect } from '@jest/globals'
