@@ -1,10 +1,10 @@
 install:
-	npm ci
+	 npm ci
 
 lint:
-	npx eslint --no-config-lookup --config eslint.config.js .
+	 npx eslint .
 
 test:
-	npm test
+	 npm test
 
 ci: install lint test
