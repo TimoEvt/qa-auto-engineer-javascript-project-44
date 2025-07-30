@@ -1,40 +1,21 @@
-import js from '@eslint/js'
-import globals from 'globals'
+import js from "@eslint/js"
+import globals from "globals"
+import jest from "eslint-plugin-jest"
 
 export default [
-  js.configs.recommended,
-
-  // Базовые настройки для всех JS-файлов
   {
-    files: ['**/*.{js,mjs,cjs}'],
+    files: ["**/*.{js,mjs,cjs}"],
+    plugins: { js, jest },
     languageOptions: {
       globals: {
-        ...globals.node,
-        ...globals.browser,
-        require: 'readonly',
-        module: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-      },
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-    rules: {
-      'no-console': 'off',
-      'import/extensions': 'off',
-    },
-  },
-
-  // Отдельные настройки для тестов
-  {
-    files: ['**/__tests__/**/*.js', '**/*.test.js', '**/*.spec.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
+        ...globals.node, // Для Node.js окружения
+        ...globals.jest, // Для Jest
       },
     },
     rules: {
-      'no-undef': 'off',
+      ...js.configs.recommended.rules,
+      ...jest.configs.recommended.rules,
+      "semi": ["error", "never"], // Стиль без точек с запятой
     },
   },
 ]
