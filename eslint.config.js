@@ -37,5 +37,4 @@ export default [
       'no-undef': 'off',
     },
   },
-];
-
+]
