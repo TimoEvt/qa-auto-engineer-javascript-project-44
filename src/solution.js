@@ -1,3 +1,1 @@
-export default function solution() {
-  // TODO: реализовать решение
-}
+export default /ruby1\.js/
