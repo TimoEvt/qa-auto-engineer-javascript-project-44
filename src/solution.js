@@ -1,1 +1,3 @@
-import { test, expect } from '@jest/globals'
+export default function solution() {
+  // TODO: реализовать решение
+}
