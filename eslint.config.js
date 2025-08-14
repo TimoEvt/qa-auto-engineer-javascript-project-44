@@ -7,16 +7,19 @@ export default [
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js, jest },
     languageOptions: {
+      env: {
+        node: true,
+        jest: true, // чтобы ESLint видел test/expect
+      },
       globals: {
-        ...globals.node, // Для Node.js окружения
-        ...globals.jest, // Для Jest
+        ...globals.node,
       },
     },
     rules: {
       ...js.configs.recommended.rules,
       ...jest.configs.recommended.rules,
-      semi: ['error', never], // Стиль без точек с запятой
+      semi: ['error', 'never'], 
     },
   },
 ]
-    
+  
