@@ -3,7 +3,6 @@ import jestPlugin from 'eslint-plugin-jest'
 
 export default [
   {
-    // Общие настройки для всего проекта
     env: {
       browser: true,
       node: true,
@@ -15,8 +14,8 @@ export default [
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
-      'quote-props': ['error', 'as-needed'],
-      'comma-dangle': ['error', 'always-multiline'],
+      quoteProps: ['error', 'as-needed'], // без кавычек вокруг имени свойства
+      commaDangle: ['error', 'always-multiline'], // camelCase для @stylistic
     },
     parserOptions: {
       ecmaVersion: 2024,
@@ -24,8 +23,8 @@ export default [
     },
   },
   {
-    // Настройки для тестов
-    files: ['**/__tests__/**/*.js', '**/__tests__/**/*.cjs', '**/__tests__/**/*.mjs'],
+    // Override для тестов
+    files: ['**/__tests__/**/*.js'],
     env: {
       jest: true,
       node: true,
@@ -34,7 +33,7 @@ export default [
       jest: jestPlugin,
     },
     rules: {
-      // Здесь можно добавлять правила только для тестов
+      // Можно оставить пустым, ESLint будет знать про jest
     },
   },
 ]
