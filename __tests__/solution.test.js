@@ -1,4 +1,5 @@
-/* eslint-env jest */
+// @ts-check
+import { test, expect } from '@jest/globals'
 import solution from '../src/solution.js'
 
 test('regex matches ruby1.js', () => {
