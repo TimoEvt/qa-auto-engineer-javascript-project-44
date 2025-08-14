@@ -1,3 +1,4 @@
+/* eslint-env jest */
 // @ts-check
 import solution from '../src/solution.js'
 
