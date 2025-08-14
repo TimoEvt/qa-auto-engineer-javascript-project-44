@@ -1,7 +1,7 @@
 // eslint.config.js
-import js from "@eslint/js"
-import globals from "globals"
-import jest from "eslint-plugin-jest"
+import js from '@eslint/js'
+import globals from 'globals'
+import jest from 'eslint-plugin-jest'
 
 export default [
   {
@@ -18,13 +18,13 @@ export default [
       jest,
     },
     rules: {
-      semi: ["error", "always"],
-      quotes: ["error", "single"],
-      "quote-props": ["error", "as-needed"],
+      semi: ['error', 'always'],
+      quotes: ['error', 'single'],
+      "quote-props": ['error', 'as-needed'],
     },
     parserOptions: {
       ecmaVersion: 2024,
-      sourceType: "module",
+      sourceType: 'module',
     },
   },
 ]
