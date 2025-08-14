@@ -1,2 +1,2 @@
-/* eslint-env jest */
+// Просто экспортируем регулярное выражение
 export default /ruby1\.js/
