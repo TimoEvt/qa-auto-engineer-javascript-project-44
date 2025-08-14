@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import jest from 'eslint-plugin-jest'
+import globals from 'globals'
 
 export default [
   {
@@ -8,13 +9,22 @@ export default [
     languageOptions: {
       env: {
         node: true,
-        jest: true, // чтобы ESLint видел test/expect
+      },
+      globals: {
+        ...globals.node,
+        test: 'readonly',
+        expect: 'readonly',
+        describe: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
       },
     },
     rules: {
       ...js.configs.recommended.rules,
       ...jest.configs.recommended.rules,
-      semi: ['error', 'never'], // правильно: строка 'never'
+      semi: ['error', 'never'],
+      'no-trailing-spaces': 'error',
+      'no-multiple-empty-lines': ['error', { max: 0 }],
     },
   },
 ]
