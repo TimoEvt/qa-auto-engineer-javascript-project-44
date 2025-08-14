@@ -14,8 +14,8 @@ export default [
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
-      quoteProps: ['error', 'as-needed'], // без кавычек вокруг имени свойства
-      commaDangle: ['error', 'always-multiline'], // camelCase для @stylistic
+      quoteProps: ['error', 'as-needed'],
+      commaDangle: ['error', 'always-multiline'],
     },
     parserOptions: {
       ecmaVersion: 2024,
@@ -23,7 +23,6 @@ export default [
     },
   },
   {
-    // Override для тестов
     files: ['**/__tests__/**/*.js'],
     env: {
       jest: true,
@@ -31,9 +30,6 @@ export default [
     },
     plugins: {
       jest: jestPlugin,
-    },
-    rules: {
-      // Можно оставить пустым, ESLint будет знать про jest
     },
   },
 ]
