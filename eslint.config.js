@@ -1,8 +1,9 @@
 import globals from 'globals'
-import jest from 'eslint-plugin-jest'
+import jestPlugin from 'eslint-plugin-jest'
 
 export default [
   {
+    // Общие настройки для всего проекта
     env: {
       browser: true,
       node: true,
@@ -10,9 +11,6 @@ export default [
     globals: {
       ...globals.browser,
       ...globals.node,
-    },
-    plugins: {
-      jest,
     },
     rules: {
       semi: ['error', 'always'],
@@ -24,13 +22,19 @@ export default [
       ecmaVersion: 2024,
       sourceType: 'module',
     },
-    overrides: [
-      {
-        files: ['**/__tests__/**/*.js'],
-        env: {
-          jest: true, // только для тестов
-        },
-      },
-    ],
+  },
+  {
+    // Настройки для тестов
+    files: ['**/__tests__/**/*.js', '**/__tests__/**/*.cjs', '**/__tests__/**/*.mjs'],
+    env: {
+      jest: true,
+      node: true,
+    },
+    plugins: {
+      jest: jestPlugin,
+    },
+    rules: {
+      // Здесь можно добавлять правила только для тестов
+    },
   },
 ]
