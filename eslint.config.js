@@ -1,35 +1,29 @@
+// eslint.config.js
 import globals from 'globals'
-import jestPlugin from 'eslint-plugin-jest'
+import jest from 'eslint-plugin-jest'
 
 export default [
   {
-    env: {
-      browser: true,
-      node: true,
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        test: 'readonly',
+        expect: 'readonly',
+      },
+      parserOptions: {
+        ecmaVersion: 2024,
+        sourceType: 'module',
+      },
     },
-    globals: {
-      ...globals.browser,
-      ...globals.node,
+    plugins: {
+      jest,
     },
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
-      quoteProps: ['error', 'as-needed'],
-      commaDangle: ['error', 'always-multiline'],
-    },
-    parserOptions: {
-      ecmaVersion: 2024,
-      sourceType: 'module',
-    },
-  },
-  {
-    files: ['**/__tests__/**/*.js'],
-    env: {
-      jest: true,
-      node: true,
-    },
-    plugins: {
-      jest: jestPlugin,
+      'quote-props': ['error', 'as-needed'],
+      'comma-dangle': ['error', 'always-multiline'],
     },
   },
 ]
