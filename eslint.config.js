@@ -1,10 +1,10 @@
-import js from "@eslint/js"
-import globals from "globals"
-import jest from "eslint-plugin-jest"
+import js from '@eslint/js'
+import globals from 'globals'
+import jest from 'eslint-plugin-jest'
 
 export default [
   {
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ['**/*.{js,mjs,cjs}'],
     plugins: { js, jest },
     languageOptions: {
       globals: {
@@ -15,7 +15,8 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...jest.configs.recommended.rules,
-      "semi": ["error", "never"], // Стиль без точек с запятой
+      semi: ['error', never], // Стиль без точек с запятой
     },
   },
 ]
+    
