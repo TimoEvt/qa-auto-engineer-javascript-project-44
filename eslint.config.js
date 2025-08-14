@@ -6,23 +6,23 @@ export default [
     env: {
       browser: true,
       node: true,
-      jest: true
+      jest: true,
     },
     globals: {
       ...globals.browser,
-      ...globals.node
+      ...globals.node,
     },
     plugins: {
-      jest
+      jest,
     },
     rules: {
-      semi: ['error', 'always'],
-      quotes: ['error', 'single'],
-      'quote-props': ['error', 'as-needed']
+      'semi': ['error', 'always'],
+      'quotes': ['error', 'single'],
+      'quote-props': ['error', 'as-needed'],
     },
     parserOptions: {
       ecmaVersion: 2024,
-      sourceType: 'module'
-    }
-  }
+      sourceType: 'module',
+    },
+  },
 ]
